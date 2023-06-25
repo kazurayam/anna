@@ -23,7 +23,8 @@ WebUI.navigateToUrl(url)
 // now we should wait for the page to load completely before taking its screenshot
 TestObject footerLogo = makeTestObject('footerLogo', '//footer//img[@alt="ADM Logo Footer"]')
 WebUI.verifyElementPresent(footerLogo, 10)
-// now the page has been loaded complate
+WebUI.delay(1)
+// now the page have been loaded completely
 
 // let's take a full page screenshot using the built-in keyword 
 WebUI.takeFullPageScreenshotAsCheckpoint(png.toString())
